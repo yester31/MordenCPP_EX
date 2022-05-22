@@ -34,5 +34,5 @@ int main() {
 	std::cout << pos1;
 	Point pos2(10, 20);
 	std::cout << pos2;
-
+    return 0;
 }

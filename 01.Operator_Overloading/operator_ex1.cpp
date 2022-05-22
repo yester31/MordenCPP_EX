@@ -35,22 +35,24 @@ Point operator-(const Point &pos1, const Point &pos2) // operator- ¶ó´Â ÀÌ¸§ÀÇ Ç
 	return pos;
 }
 
-int main() {
+int main1() {
 
-	Point pos1(3, 4);
-	Point pos2(10, 20);
-	pos1.ShowPosition();
-	pos2.ShowPosition();
+    Point pos1(3, 4);
+    Point pos2(10, 20);
+    pos1.ShowPosition();
+    pos2.ShowPosition();
 
-	// ¸â¹öÇÔ¼ö¿¡ ÀÇÇÑ ¿¬»êÀÚ ¿À¹ö·Îµù
-	Point pos3 = pos1.operator+(pos2);
-	Point pos4 = pos1 + pos2;		// pos1+pos2 =(ÇØ¼®)=> pos1.operator+(pos2)
-	pos3.ShowPosition();
-	pos4.ShowPosition();
+    // ¸â¹öÇÔ¼ö¿¡ ÀÇÇÑ ¿¬»êÀÚ ¿À¹ö·Îµù
+    Point pos3 = pos1.operator+(pos2);
+    Point pos4 = pos1 + pos2;		// pos1+pos2 =(ÇØ¼®)=> pos1.operator+(pos2)
+    pos3.ShowPosition();
+    pos4.ShowPosition();
 
-	// Àü¿ªÇÔ¼ö¿¡ ÀÇÇÑ ¿¬»êÀÚ ¿À¹ö·Îµù
-	Point pos5 = operator-(pos2, pos1);
-	Point pos6 = pos2 - pos1;		// pos2-pos1 =(ÇØ¼®)=> operator-(pos2,pos1)
-	pos5.ShowPosition();
-	pos6.ShowPosition();
+    // Àü¿ªÇÔ¼ö¿¡ ÀÇÇÑ ¿¬»êÀÚ ¿À¹ö·Îµù
+    Point pos5 = operator-(pos2, pos1);
+    Point pos6 = pos2 - pos1;		// pos2-pos1 =(ÇØ¼®)=> operator-(pos2,pos1)
+    pos5.ShowPosition();
+    pos6.ShowPosition();
+
+    return 0;
 }

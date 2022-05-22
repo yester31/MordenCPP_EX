@@ -3,16 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1831
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project1", "Project1\Project1.vcxproj", "{0115BB28-AAF8-4146-9400-86027D6E62CF}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BD860D22-EC9B-4201-A8CD-7FF41E0A74C0}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project2", "Project2\Project2.vcxproj", "{5E6375F0-F969-47B6-A1D0-2E9CE940E762}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01.Operator_overloading", "01.Operator_Overloading\Project1.vcxproj", "{0115BB28-AAF8-4146-9400-86027D6E62CF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ttt", "Project3\Project3.vcxproj", "{75674567-7B21-40F2-91C5-0D2090D72D14}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02.Template", "02.Template\Project2.vcxproj", "{5E6375F0-F969-47B6-A1D0-2E9CE940E762}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03.Type_casting", "03.Type_casting\03.Type_casting.vcxproj", "{9CC7123C-8523-495B-8EE1-EC19BA4EA5D8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04.Morden_cpp_features", "04.Morden_cpp_features\Project3.vcxproj", "{75674567-7B21-40F2-91C5-0D2090D72D14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,14 @@ Global
 		{5E6375F0-F969-47B6-A1D0-2E9CE940E762}.Release|x64.Build.0 = Release|x64
 		{5E6375F0-F969-47B6-A1D0-2E9CE940E762}.Release|x86.ActiveCfg = Release|Win32
 		{5E6375F0-F969-47B6-A1D0-2E9CE940E762}.Release|x86.Build.0 = Release|Win32
+		{9CC7123C-8523-495B-8EE1-EC19BA4EA5D8}.Debug|x64.ActiveCfg = Debug|x64
+		{9CC7123C-8523-495B-8EE1-EC19BA4EA5D8}.Debug|x64.Build.0 = Debug|x64
+		{9CC7123C-8523-495B-8EE1-EC19BA4EA5D8}.Debug|x86.ActiveCfg = Debug|Win32
+		{9CC7123C-8523-495B-8EE1-EC19BA4EA5D8}.Debug|x86.Build.0 = Debug|Win32
+		{9CC7123C-8523-495B-8EE1-EC19BA4EA5D8}.Release|x64.ActiveCfg = Release|x64
+		{9CC7123C-8523-495B-8EE1-EC19BA4EA5D8}.Release|x64.Build.0 = Release|x64
+		{9CC7123C-8523-495B-8EE1-EC19BA4EA5D8}.Release|x86.ActiveCfg = Release|Win32
+		{9CC7123C-8523-495B-8EE1-EC19BA4EA5D8}.Release|x86.Build.0 = Release|Win32
 		{75674567-7B21-40F2-91C5-0D2090D72D14}.Debug|x64.ActiveCfg = Debug|x64
 		{75674567-7B21-40F2-91C5-0D2090D72D14}.Debug|x64.Build.0 = Debug|x64
 		{75674567-7B21-40F2-91C5-0D2090D72D14}.Debug|x86.ActiveCfg = Debug|Win32
