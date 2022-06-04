@@ -8,3 +8,8 @@ Study of Morden C++
 03) 형변환 연산자
 
 04) Morden cpp 특징 (Morden cpp features)
+
+---
+reference : 
+- 열혈 C++ 프로그래밍 
+- 모던 C++ 프로그래밍 쿡북

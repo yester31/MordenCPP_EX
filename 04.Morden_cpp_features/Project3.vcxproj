@@ -126,6 +126,17 @@
   <ItemGroup>
     <None Include="README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="recipe_1_02.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="recipe_1_01.h" />
+    <ClInclude Include="recipe_1_03.h" />
+    <ClInclude Include="recipe_1_04.h" />
+    <ClInclude Include="recipe_1_05.h" />
+    <ClInclude Include="recipe_1_06.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

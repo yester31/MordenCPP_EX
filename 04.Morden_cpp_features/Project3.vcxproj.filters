@@ -17,4 +17,29 @@
   <ItemGroup>
     <None Include="README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="recipe_1_02.h">
+      <Filter>헤더 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="recipe_1_01.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="recipe_1_03.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="recipe_1_04.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="recipe_1_05.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="recipe_1_06.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
