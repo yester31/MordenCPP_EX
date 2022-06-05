@@ -1,4 +1,5 @@
 #pragma once
+//#define HAS_USING_ENUMS
 
 #ifdef HAS_USING_ENUMS
 #include <string_view>
@@ -7,6 +8,7 @@
 namespace recipe_1_06
 {
     /*
+    // 범위가 지정되지 않은 열거형
     enum Status { Unknown, Created, Connected };
 
     enum Codes
@@ -29,15 +31,11 @@ namespace recipe_1_06
     }
     */
 
+    // 범위가 지정된 열거형
     enum class Status { Unknown, Created, Connected };
-
     enum class Codes { OK, Failure, Unknown };
-
-
-    enum class Codes2 : unsigned int;
-
+    enum class Codes2 : unsigned int; // 명시적인 기본 타입 지정
     void print_code(Codes2 const code) {}
-
     enum class Codes2 : unsigned int
     {
         OK = 0,
@@ -79,16 +77,13 @@ namespace recipe_1_06
     void execute()
     {
         Codes code = Codes::Unknown;
-
-        Codes c1 = Codes::OK;					      // OK
-        //int c2 = Codes::Failure;   				   // error
-        int c3 = static_cast<int>(Codes::Failure);// OK
-
+        Codes c1 = Codes::OK;                     // OK
+        //int c2 = Codes::Failure;                // error (enum class에서 암시적 변환되지 않음)
+        int c3 = static_cast<int>(Codes::Failure);// OK(명시적 변환)
         {
 #ifdef HAS_USING_ENUMS
             using Status::Unknown;
             Status s = Unknown;
-
             foo::Status s = foo::Created; // instead of foo::Status::Created
 #endif
         }
