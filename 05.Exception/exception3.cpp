@@ -1,4 +1,5 @@
 #include "exception3.hpp"
+// 사용자 정의 예외 클래스 
 
 class Exception
 {
@@ -46,16 +47,18 @@ void doSomething()
         std::cout << "doSomething()" << std::endl;
         std::cerr << "Exception " << x << std::endl;
     }
-    catch (ArrayException &e)
-    {
-        std::cout << "doSomething()" << std::endl;
-        e.report();
-        //throw 
-    }
+    //catch (ArrayException &e)
+    //{
+    //    std::cout << "doSomething()" << std::endl;
+    //    e.report();
+    //    throw e; // re-throw
+    //}
     catch (Exception &e)
     {
         std::cout << "doSomething()" << std::endl;
         e.report();
+        //throw e; // re-throw
+        throw; // re-throw
     }
 }
 
@@ -70,6 +73,10 @@ int exception3::exception3()
         std::cout << "main()" << std::endl;
         e.report();
     }
-
+    catch (Exception &e)
+    {
+        std::cout << "main()" << std::endl;
+        e.report();
+    }
     return 0;
 }

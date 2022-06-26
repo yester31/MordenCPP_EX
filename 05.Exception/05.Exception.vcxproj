@@ -131,10 +131,12 @@
     <ClCompile Include="exception2.cpp" />
     <ClCompile Include="exception2.hpp" />
     <ClCompile Include="exception3.cpp" />
+    <ClCompile Include="exception4.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="exception3.hpp" />
+    <ClInclude Include="exception4.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
