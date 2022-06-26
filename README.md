@@ -2,7 +2,7 @@
 
 ## Study of (Morden) C++
 
-#### 01) [Operator Overloading](01.Operator_overloading/README.md)
+#### 01) [Operator Overloading](01.Operator_Overloading/README.md)
 
 #### 02) [Template](02.Template/README.md)
 
