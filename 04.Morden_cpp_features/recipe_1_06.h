@@ -1,5 +1,5 @@
 #pragma once
-//#define HAS_USING_ENUMS
+// #define HAS_USING_ENUMS
 
 #ifdef HAS_USING_ENUMS
 #include <string_view>
@@ -8,7 +8,7 @@
 namespace recipe_1_06
 {
     /*
-    // ¹üÀ§°¡ ÁöÁ¤µÇÁö ¾ÊÀº ¿­°ÅÇü
+    // ë²”ìœ„ê°€ ì§€ì •ë˜ì§€ ì•Šì€ ì—´ê±°í˜•
     enum Status { Unknown, Created, Connected };
 
     enum Codes
@@ -31,10 +31,20 @@ namespace recipe_1_06
     }
     */
 
-    // ¹üÀ§°¡ ÁöÁ¤µÈ ¿­°ÅÇü
-    enum class Status { Unknown, Created, Connected };
-    enum class Codes { OK, Failure, Unknown };
-    enum class Codes2 : unsigned int; // ¸í½ÃÀûÀÎ ±âº» Å¸ÀÔ ÁöÁ¤
+    // ë²”ìœ„ê°€ ì§€ì •ëœ ì—´ê±°í˜•
+    enum class Status
+    {
+        Unknown,
+        Created,
+        Connected
+    };
+    enum class Codes
+    {
+        OK,
+        Failure,
+        Unknown
+    };
+    enum class Codes2 : unsigned int; // ëª…ì‹œì ì¸ ê¸°ë³¸ íƒ€ì… ì§€ì •
     void print_code(Codes2 const code) {}
     enum class Codes2 : unsigned int
     {
@@ -46,7 +56,12 @@ namespace recipe_1_06
 #ifdef HAS_USING_ENUMS
     struct foo
     {
-        enum class Status { Unknown, Created, Connected };
+        enum class Status
+        {
+            Unknown,
+            Created,
+            Connected
+        };
 
         using enum Status;
     };
@@ -56,9 +71,12 @@ namespace recipe_1_06
         switch (s)
         {
             using enum Status;
-        case Unknown:   /*...*/ break;
-        case Created:   /*...*/ break;
-        case Connected: /*...*/ break;
+        case Unknown: /*...*/
+            break;
+        case Created: /*...*/
+            break;
+        case Connected: /*...*/
+            break;
         }
     }
 
@@ -67,9 +85,12 @@ namespace recipe_1_06
         switch (s)
         {
             using enum Status;
-        case Unknown:   return "Unknown";
-        case Created:   return "Created";
-        case Connected: return "Connected";
+        case Unknown:
+            return "Unknown";
+        case Created:
+            return "Created";
+        case Connected:
+            return "Connected";
         }
     }
 #endif
@@ -77,9 +98,9 @@ namespace recipe_1_06
     void execute()
     {
         Codes code = Codes::Unknown;
-        Codes c1 = Codes::OK;                     // OK
-        //int c2 = Codes::Failure;                // error (enum class¿¡¼­ ¾Ï½ÃÀû º¯È¯µÇÁö ¾ÊÀ½)
-        int c3 = static_cast<int>(Codes::Failure);// OK(¸í½ÃÀû º¯È¯)
+        Codes c1 = Codes::OK; // OK
+        // int c2 = Codes::Failure;                // error (enum classì—ì„œ ì•”ì‹œì  ë³€í™˜ë˜ì§€ ì•ŠìŒ)
+        int c3 = static_cast<int>(Codes::Failure); // OK(ëª…ì‹œì  ë³€í™˜)
         {
 #ifdef HAS_USING_ENUMS
             using Status::Unknown;

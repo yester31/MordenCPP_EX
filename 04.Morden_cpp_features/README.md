@@ -11,15 +11,33 @@
   - 항상 올바른 타입을 사용하는 것을 보장(암시적인 변환 발생하지 않음, 데이터 손실 가능성 없음)
   - 객체지향적인 방식을 향상(지정된 타입의 수가 적을 수록 코드는 일반화)
   - 긴 이름의 타입을 사용되는 시간을 절약
+* 주의:
+  - 타입에 대한 자리 표시자일 뿐
+  - const/volatile 과 참조 지정자에 대한 것은 아니다.
+  - 위 경우 명시적으로 지정해야 한다.
+  - 다중 단어 타입에는 auto를 사용할 수 없다.
+  
+  decltype(auto) : 타입을 올바르게 추론
+
 
 ### using
-- 타입별칭 및 별칭 탬플릿
-- 타입 이름 대신 사용할 수 있는 동의어 생성 가능
+- 타입 이름 대신 사용할 수 있는 동의어 생성 가능 (typedef 선언)
+- 타입 별칭 : 이미 선언된 다른 타입의 이름
+  using identifier = type-id 
+- 별칭 탬플릿 : 이미 선언된 다른 템플릿의 이름
+  template<template-params-list> identifier = type-id 
+* 주의 :
+  - 별칭을 생성할 때 typedef와 using 선언을 함께 사용하지 않는다.
+  - using 구문을 사용해 함수 포인터 타입의 이름을 생성한다.
+
 
 ### uniform initialization
 - 괄호 초기화 또는 균일한 초기화라 부름
+  T object {other}; // 직접 목록 초기화
+  T object = {other}; // 복사 목록 초기화
 - 데이터를 초기화 하는 균일한 방법
 - 축소 변환을 허용하지 않는다. 
+*POD(Plain Old Data) : 메모리상에서 연속적인 바이트열
 
 ### non staic member variabel initialization
 - 비정적 멤버 초기화

@@ -21,14 +21,14 @@ namespace recipe_1_05
     struct foo3
     {
         char a;
-        int  b;
+        int b;
     };
 
     struct foo3_
     {
         char a;        // 1 byte
         char _pad0[3]; // 3 bytes padding to put b on a 4-byte boundary
-        int  b;        // 4 bytes
+        int b;         // 4 bytes
     };
 
     struct foo4
@@ -44,15 +44,13 @@ namespace recipe_1_05
     {
         int a;         // 4 bytes
         char b;        // 1 byte
-        char _pad0[3]; // 3 bytes padding to put c on a 8-byte boundary 
+        char _pad0[3]; // 3 bytes padding to put c on a 8-byte boundary
         float c;       // 4 bytes
         char _pad1[4]; // 4 bytes padding to put d on a 8-byte boundary
         double d;      // 8 bytes
         bool e;        // 1 byte
         char _pad2[7]; // 7 bytes padding to make sizeof struct multiple of 8
     };
-
-
 
     void execute()
     {
@@ -76,11 +74,11 @@ namespace recipe_1_05
         }
 
         {
-            // 가장 엄격한 값으로 정렬됨 (8)
+            // ???? ?????? ?????? ????? (8)
             struct alignas(4) foo
             {
                 alignas(2) char a;
-                alignas(8) int  b;
+                alignas(8) int b;
             };
 
             struct foo_
@@ -96,7 +94,7 @@ namespace recipe_1_05
             std::cout << std::endl;
 
             {
-                alignas(8)   int a;
+                alignas(8) int a;
                 alignas(256) long b[4];
 
                 printf("%p\n", &a); // eg. 0000006C0D9EF908

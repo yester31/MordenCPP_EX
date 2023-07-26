@@ -4,12 +4,12 @@
 
 namespace recipe_1_02
 {
-    typedef unsigned char   byte;
-    typedef unsigned char * byte_ptr;
-    typedef int             array_t[10];
-    //typedef void(*fn)(byte, double);
+    typedef unsigned char byte;
+    typedef unsigned char *byte_ptr;
+    typedef int array_t[10];
+    // typedef void(*fn)(byte, double);
 
-    template<typename T>
+    template <typename T>
     class foo
     {
         typedef T value_type;
@@ -25,15 +25,17 @@ namespace recipe_1_02
     vint_t v;
 
     // this is not possible
-    //typedef std::vector<T> vec_t;
-    //vec_t<int> v;
+    // typedef std::vector<T> vec_t;
+    // vec_t<int> v;
 
     template <typename T>
     using vec_t = std::vector<T>;
 
     // 별칭 템플릿
     template <class T>
-    class custom_allocator { /* ... */ };
+    class custom_allocator
+    { /* ... */
+    };
 
     template <typename T>
     using vec_t_ca = std::vector<T, custom_allocator<T>>;
@@ -49,16 +51,16 @@ namespace recipe_1_02
             using array_t = int[10];
             using fn = void(byte, double); // 함수 포인터 타입
 
-            byte b{ 42 };
-            byte_ptr pb = new byte[10]{ 0 };
-            array_t a{ 0,1,2,3,4,5,6,7,8,9 };
-            fn* f = func;
+            byte b{42};
+            byte_ptr pb = new byte[10]{0};
+            array_t a{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+            fn *f = func;
             f(1, 42.0);
         }
 
         {
-            vec_t<int>           vi;
-            vec_t<std::string>   vs;
+            vec_t<int> vi;
+            vec_t<std::string> vs;
         }
     }
 }
