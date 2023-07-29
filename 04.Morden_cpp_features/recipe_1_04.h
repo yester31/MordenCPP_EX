@@ -10,7 +10,7 @@ namespace recipe_1_04
         double X;
         double Y;
         Point(double const x = 0.0, double const y = 0.0)
-            : X(x), Y(y) {} // ???????? ????????? ?????? ????
+            : X(x), Y(y) {} // 이니셜라이저 목록
     };
 
     struct foo
@@ -93,7 +93,7 @@ namespace recipe_1_04
 
             foo f;
             bar b(f);
-            // ???? ???
+
             // default constructor
             // default constructor
             // assignment
@@ -113,7 +113,7 @@ namespace recipe_1_04
 
             foo f;
             bar b(f);
-            // ???? ???
+
             // default constructor
             // copy constructor
             // destructor

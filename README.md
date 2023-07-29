@@ -16,6 +16,8 @@
 
 #### 07) [Smart pointer](07.Smart_pointer/README.md)
 
+#### 08) [Number&String](08.Morden_cpp_CH2/README.md)
+
 
 ---
 reference : 

@@ -14,13 +14,15 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02.Template", "02.Template\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03.Type_casting", "03.Type_casting\03.Type_casting.vcxproj", "{9CC7123C-8523-495B-8EE1-EC19BA4EA5D8}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04.Morden_cpp_features", "04.Morden_cpp_features\Project3.vcxproj", "{75674567-7B21-40F2-91C5-0D2090D72D14}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04.Morden_cpp_CH1", "04.Morden_cpp_features\Project3.vcxproj", "{75674567-7B21-40F2-91C5-0D2090D72D14}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05.Exception", "05.Exception\05.Exception.vcxproj", "{6CD02C5B-6048-453B-A879-076952E7EBC6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06.[DS]List", "06.[DS]List\06.[DS]List.vcxproj", "{C6186895-2356-4A29-8AB5-E7AF967A3368}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07.Smart_pointer", "07.Smart_pointer\07.Smart_pointer.vcxproj", "{3CE6BC84-04A7-426D-AA72-D72EFDF879FD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08.Morden_cpp_CH2", "08.Morden_cpp_CH2\08.Morden_cpp_CH2.vcxproj", "{8B70A789-7A9D-42B6-A092-A574B488C886}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,6 +88,14 @@ Global
 		{3CE6BC84-04A7-426D-AA72-D72EFDF879FD}.Release|x64.Build.0 = Release|x64
 		{3CE6BC84-04A7-426D-AA72-D72EFDF879FD}.Release|x86.ActiveCfg = Release|Win32
 		{3CE6BC84-04A7-426D-AA72-D72EFDF879FD}.Release|x86.Build.0 = Release|Win32
+		{8B70A789-7A9D-42B6-A092-A574B488C886}.Debug|x64.ActiveCfg = Debug|x64
+		{8B70A789-7A9D-42B6-A092-A574B488C886}.Debug|x64.Build.0 = Debug|x64
+		{8B70A789-7A9D-42B6-A092-A574B488C886}.Debug|x86.ActiveCfg = Debug|Win32
+		{8B70A789-7A9D-42B6-A092-A574B488C886}.Debug|x86.Build.0 = Debug|Win32
+		{8B70A789-7A9D-42B6-A092-A574B488C886}.Release|x64.ActiveCfg = Release|x64
+		{8B70A789-7A9D-42B6-A092-A574B488C886}.Release|x64.Build.0 = Release|x64
+		{8B70A789-7A9D-42B6-A092-A574B488C886}.Release|x86.ActiveCfg = Release|Win32
+		{8B70A789-7A9D-42B6-A092-A574B488C886}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

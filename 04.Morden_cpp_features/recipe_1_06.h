@@ -1,5 +1,5 @@
 #pragma once
-// #define HAS_USING_ENUMS
+//#define HAS_USING_ENUMS
 
 #ifdef HAS_USING_ENUMS
 #include <string_view>
@@ -7,29 +7,29 @@
 
 namespace recipe_1_06
 {
-    /*
-    // 범위가 지정되지 않은 열거형
-    enum Status { Unknown, Created, Connected };
+    
+    // //범위가 지정되지 않은 열거형
+    //enum Status { Unknown, Created, Connected };
 
-    enum Codes
-    {
-       OK,
-       Failure,
-       // Unknown redefinition
-    };
-    */
+    //enum Codes
+    //{
+    //   OK,
+    //   Failure,
+    //    Unknown //redefinition
+    //};
+    
 
-    /*
-    namespace Status
-    {
-       enum Status { Unknown, Created, Connected };
-    }
+    
+    //namespace Status
+    //{
+    //   enum Status { Unknown, Created, Connected };
+    //};
 
-    namespace Codes
-    {
-       enum Codes { OK, Failure, Unknown };
-    }
-    */
+    //namespace Codes
+    //{
+    //   enum Codes { OK, Failure, Unknown };
+    //};
+    
 
     // 범위가 지정된 열거형
     enum class Status

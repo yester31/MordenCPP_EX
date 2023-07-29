@@ -24,6 +24,15 @@
     <ClCompile Include="recipe_1_02.h">
       <Filter>헤더 파일</Filter>
     </ClCompile>
+    <ClCompile Include="recipe_1_11_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="recipe_1_11_2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="recipe_1_11_3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="recipe_1_01.h">
@@ -48,6 +57,24 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="recipe_1_09.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="recipe_1_10.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="recipe_1_11_1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="recipe_1_11_2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="recipe_1_12.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="recipe_1_13.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="recipe_1_14.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

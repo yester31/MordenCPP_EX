@@ -23,9 +23,9 @@
 ### using
 - 타입 이름 대신 사용할 수 있는 동의어 생성 가능 (typedef 선언)
 - 타입 별칭 : 이미 선언된 다른 타입의 이름
-  using identifier = type-id 
+    using identifier = type-id 
 - 별칭 탬플릿 : 이미 선언된 다른 템플릿의 이름
-  template<template-params-list> identifier = type-id 
+    template<template-params-list> identifier = type-id 
 * 주의 :
   - 별칭을 생성할 때 typedef와 using 선언을 함께 사용하지 않는다.
   - using 구문을 사용해 함수 포인터 타입의 이름을 생성한다.
@@ -33,18 +33,25 @@
 
 ### uniform initialization
 - 괄호 초기화 또는 균일한 초기화라 부름
-  T object {other}; // 직접 목록 초기화
-  T object = {other}; // 복사 목록 초기화
+    T object {other}; // 직접 목록 초기화
+    T object = {other}; // 복사 목록 초기화
 - 데이터를 초기화 하는 균일한 방법
 - 축소 변환을 허용하지 않는다. 
-*POD(Plain Old Data) : 메모리상에서 연속적인 바이트열
+    // int i{ 1.2 };              // error
+    int i{static_cast<int>(1.2)}; // 명시적 변환 수행
+* POD(Plain Old Data) : 메모리상에서 연속적인 바이트열
 
 ### non staic member variabel initialization
-- 비정적 멤버 초기화
+- 가능한 항상 생성자 이니셜라이저 목록을 선호하는 것이 좋다.
+- C++11 부터 비정적 멤버는 클래스에서 선언될 때 초기화 될 수 있다.(디폴트 멤버 초기화)
+    상수와 생성자 매개변수를 기반으로 초기화되지 않은 멤버를 위한 것
 
 ### 객체 정렬 제어 및 쿼리
 - 정렬 요구 사항을 제어하기 위한 alignas 지정자
+    객체 또는 타입의 정렬을 지정할때 alignas 사용
 - 타입의 정렬 요구 사항을 검색하는  alignof 연산자
+- 프로세서는 메모리에 접근할 때 한 번에 1바이트씩이 아닌 2의 제곱의 큰 청크 단위로 접근한다.
+- C++ 컴파일러는 데이터 타입의 크기에 따라 변수를 정렬
 
 ### 범위가 지정된 열거형 사용
 - 열거형(enumeration) : 값의 컬렉션을 정의하는 타입
@@ -65,7 +72,18 @@
 - 더 이상 함수를 재정의하거나 클래스를 파생 시킬수 없도록 final 특별 식별자 사용
 
 ### 범위 기반 for 루프를 사용해 범위 반복(for each)
-
+- C+11에서 범위 기반 for loop는 다음과 같은 일반 구문을 갖는다.
      for (range_declaration : range_expression ) loop_statement
-_
 
+### 암시적 변환을 피하기 위해 명시적(explicit) 생성자 및 변환 연산자 사용하기
+- 명시적 생성자와 변환 연산자를 선언하려면 선언에서 explicit 지정자를 사용 
+
+### 정적 전역 대신 명명되지 않은 네임스페이스 사용하기
+- 정적으로 선언되지 않은 모든 심볼은 외부 연결을 가지며 그 이름은 프로그램 전체에서 고유해야 한다.
+
+### 심볼 버전 관리에 인라인 네임스페이스 사용하기
+- 중첩된 네임스페이스의 선언을 주변 네임스페이스의 일부처럼 보이고 동작하게 만드는 메커니즘
+
+### 구조적 바인딩을 상용해 다중 반환값 처리
+- C++ 17은 std::tie()의 시맨틱 사용을 튜플의 값을 명명된 변수로 풀 수 있는 일급 핵심 언어 기능으로 확장한다.
+- 이 기능을 구조적 바인딩이라고 한다. 
